@@ -2,7 +2,7 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<title>PMDP Odjezdová tabule</title>
+<title>PMDP Panel</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,20 +10,22 @@
 
 <div class="panel">
 
-    <!-- Horní označník -->
+    <!-- označník -->
     <div class="oznacnik">
         <img src="tram.png" class="tram-icon">
-        <div id="stopName">Zadej zastávku</div>
+        <div id="stopName">Vyber zastávku</div>
     </div>
 
-    <!-- Vyhledání -->
+    <!-- seznam zastávek -->
     <div class="search">
-        <input id="stopInput" placeholder="Např. Anglické nábřeží">
-        <button onclick="loadStop()">Zobrazit</button>
+        <select id="stopSelect"></select>
+        <button onclick="selectStop()">Zobrazit</button>
     </div>
 
-    <!-- Odjezdová tabule -->
-    <div id="departures"></div>
+    <!-- info -->
+    <div id="departures">
+        Načítám seznam zastávek...
+    </div>
 
 </div>
 
